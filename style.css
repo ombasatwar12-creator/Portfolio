@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #222, #444);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 { margin: 0; font-size: 3em; }
+header p { font-size: 1.2em; margin-top: 10px; color: #ddd; }
+
+nav {
+  background: #333;
+  padding: 10px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover { color: #00ccff; }
+
+section { padding: 40px 20px; max-width: 900px; margin: auto; }
+
+h2 {
+  color: #222;
+  border-bottom: 2px solid #444;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+ul { list-style: none; padding: 0; }
+ul li {
+  background: #eee;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.project {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+footer a { color: #00ccff; text-decoration: none; margin: 0 10px; }
+footer a:hover { text-decoration: underline; }
+
+/* Spinner */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #00ccff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Error messages */
+.error { color: red; font-size: 0.9em; display: block; margin-top: 5px; }
+
+/* Success fade animation */
+.fade-success { opacity: 0; transition: opacity 1s ease-in-out; color: green; font-weight: bold; margin-top: 15px; }
+.fade-success.visible { opacity: 1; }
+
+/* Dark mode styles */
+body.dark-mode { background: #121212; color: #e0e0e0; }
+body.dark-mode header { background: linear-gradient(135deg, #000, #222); color: #fff; }
+body.dark-mode nav { background: #000; }
+body.dark-mode nav a { color: #e0e0e0; }
+body.dark-mode section { background: #1e1e1e; border-radius: 8px; }
+body.dark-mode .project { background: #2a2a2a; box-shadow: 0 2px 5px rgba(255,255,255,0.1); }
+body.dark-mode footer { background: #000; color: #ccc; }
+
+#darkModeToggle {
+  background: #00ccff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#darkModeToggle:hover { background: #0099cc; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 { font-size: 2em; }
+  nav a, #darkModeToggle { display: block; margin: 10px 0; }
+  section { padding: 20px; }
+}
