@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Omiix – Web Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Omiix – Web Developer</h1>
+    <p>Crafting modern web experiences</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>I’m a web developer passionate about creating responsive and user-friendly websites. With experience in HTML, CSS, and JavaScript, I love turning ideas into digital solutions that are both functional and visually appealing.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5 & CSS3</li>
+      <li>JavaScript (ES6+)</li>
+      <li>Responsive Web Design</li>
+      <li>React.js</li>
+      <li>Node.js</li>
+      <li>UI/UX Design</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>A responsive personal site built with HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+    </div>
+    <div class="project">
+      <h3>E-commerce App</h3>
+      <p>A React-based shopping platform with secure checkout and dynamic product listings.</p>
+    </div>
+    <div class="project">
+      <h3>UI Design System</h3>
+      <p>A reusable design system created for consistent styling across multiple web applications.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <form id="contactForm" action="https://formspree.io/f/yourFormID" method="POST" novalidate>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required>
+      <small class="error" id="nameError"></small><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="_replyto" required>
+      <small class="error" id="emailError"></small><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <small class="error" id="messageError"></small><br><br>
+
+      <!-- reCAPTCHA widget -->
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div><br>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" style="display:none; margin-top:15px;">
+      <div class="spinner"></div>
+      <p>Sending your message...</p>
+    </div>
+
+    <!-- Thank You Message -->
+    <div id="thankYouMessage" class="fade-success" style="display:none;">
+      ✅ Thank you! Your message has been sent successfully.
+      <br><br>
+      <button id="backToForm">Send Another Message</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Omiix – Web Developer</p>
+    <p>
+      <a href="https://linkedin.com/in/omiix" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/omiix" target="_blank">GitHub</a>
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="script.js"></script>
+</body>
+</html>
